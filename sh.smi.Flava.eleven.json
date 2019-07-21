@@ -1,0 +1,97 @@
+{  
+  "id":"sh.smi.Flava.eleven",
+  "branch":"1.0",
+  "runtime":"org.freedesktop.Platform",
+  "runtime-version":"18.08",
+  "sdk":"org.freedesktop.Sdk",
+  "command":"/app/jre/bin/java",
+  "finish-args":[  
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--device=dri",
+    "--env=PATH=/app/jre/bin:/usr/bin",
+    "--filesystem=home"
+  ],
+  "build-options":{  
+    "env":{  
+      "JAVA_HOME":"/app/jre",
+      "PATH":"/usr/bin/:/usr/sbin:/app/jre/bin:/usr/bin:/app/jdk/bin:/app/bin"
+    }
+  },
+  "modules":[  
+    {  
+      "name":"openjdk",
+      "buildsystem":"simple",
+      "build-commands":[  
+        "mkdir /app/jre",
+        "cp -r * /app/jre"
+      ],
+      "sources":[  
+        {  
+          "type":"archive",
+          "url":"https://download.bell-sw.com/java/11.0.4/bellsoft-jdk11.0.4-linux-amd64.tar.gz",
+          "sha1":"68d025c450a3f99012f98fa5e60fc27540eee89a"
+        }
+      ]
+    },
+    {  
+      "name":"fastjar",
+      "buildsystem":"autotools",
+      "sources":[  
+        {  
+          "type":"archive",
+          "url":"https://datapacket.dl.sourceforge.net/project/fastjar/fastjar/0.94/fastjar-0.94.tar.gz",
+          "sha256":"5a217fc3e3017efb18fd1316b38d2aaa7370280fcf5732ad8fff7e27ec867b95"
+        }
+      ]
+    },
+    {  
+      "name":"wget",
+      "buildsystem":"autotools",
+      "sources":[  
+        {  
+          "type":"archive",
+          "url":"https://ftp.gnu.org/gnu/wget/wget-1.20.3.tar.gz",
+          "sha256":"31cccfc6630528db1c8e3a06f6decf2a370060b982841cfab2b8677400a5092e"
+        }
+      ]
+    },
+    {  
+      "name":"icedtea",
+      "buildsystem":"simple",
+      "sources":[  
+        {  
+          "type":"archive",
+          "url":"https://github.com/AdoptOpenJDK/IcedTea-Web/releases/download/icedtea-web-1.8.1/icedtea-web-1.8.1.linux.bin.zip",
+          "sha256":"623a25ca3356631d4c56b5b4a51c9d0c43033c7fead0e8ff0501fbfe27626db5"
+        }
+      ],
+      "build-commands":[  
+        "mkdir /app/icedtea",
+        "cp -r * /app/icedtea"
+      ]
+    },
+    {  
+      "name":"flava",
+      "buildsystem":"simple",
+      "sources":[  
+        {  
+          "type":"file",
+          "path":"sh.smi.Flava.eleven.desktop"
+        },
+        {  
+          "type":"file",
+          "path":"sh.smi.Flava.eleven.webstart.desktop"
+        }
+      ],
+      "build-commands":[  
+        "install -d /app/share/applications",
+        "install -m644 sh.smi.Flava.eleven.desktop /app/share/applications/sh.smi.Flava.eleven.desktop",
+        "install -m644 sh.smi.Flava.eleven.webstart.desktop /app/share/applications/sh.smi.Flava.eleven.webstart.desktop"
+      ]
+    }
+  ]
+}

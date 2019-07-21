@@ -1,0 +1,13 @@
+[Desktop Entry]
+Exec=/app/jre/bin/java -jar %f
+Icon=application-x-executable
+Comment=Java 11 Player
+Name=Flava 11
+NoDisplay=true
+StartupNotify=false
+Categories=Application;X-Internet;Network;
+Type=Application
+MimeType=application/java-archive
+
+
+

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Exec=/app/icedtea/bin/javaws %f
+Icon=application-x-executable
+Comment=Java 8
+Name=Flava 8 (Web Start)
+StartupNotify=false
+NoDisplay=true
+Categories=Application;X-Internet;Network;
+Type=Application
+MimeType=application/x-java-jnlp-file
+
+
