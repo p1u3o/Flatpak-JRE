@@ -1,16 +1,16 @@
 # flava
-This is java 8 and 11 packaged as a Flatpak with support for Java Web Start (Icedtea) and FX applications.
+Java 8 and 11 packaged as a Flatpak with support for Java Web Start (Icedtea) and FX applications.
 
 ## why
-I use java web start files reguarly at work for managing our servers, unfortunately IcedTea does not run very well in a container and containers don't integrate with desktops.
+I use java web start files reguarly at work for managing servers, however IcedTea does not run very well in a container and containers don't integrate with desktops.
 
-This uses prebuilt java builds from Liberica, which are based on OpenJDK. They're 100% open source and include JavaFX which is a pain to compile.
+This uses prebuilt Java builds from Liberica, which are based on OpenJDK.
 
-## How to use
+## usage
 
 When installed, just double click .jar and .jnlp files. 
 
 ## Broken
 
-Minecraft
-File Forwarding
+- Minecraft
+- File Forwarding
