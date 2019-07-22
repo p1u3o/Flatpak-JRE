@@ -2,7 +2,7 @@
 Exec=/app/jre/bin/java -jar %f
 Icon=application-x-executable
 Comment=Java 8 Player
-Name=Flava 8
+Name=Java 8
 NoDisplay=true
 StartupNotify=false
 Categories=Application;X-Internet;Network;

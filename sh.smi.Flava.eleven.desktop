@@ -2,7 +2,7 @@
 Exec=/app/jre/bin/java -jar %f
 Icon=application-x-executable
 Comment=Java 11 Player
-Name=Flava 11
+Name=Java 11
 NoDisplay=true
 StartupNotify=false
 Categories=Application;X-Internet;Network;

@@ -2,7 +2,7 @@
 Exec=/app/icedtea/bin/javaws %f
 Icon=application-x-executable
 Comment=Java 11
-Name=Flava 11 (Web Start)
+Name=Java 11 (Web Start)
 StartupNotify=false
 NoDisplay=true
 Categories=Application;X-Internet;Network;
