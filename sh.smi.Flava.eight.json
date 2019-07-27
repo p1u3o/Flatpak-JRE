@@ -13,7 +13,9 @@
     "--share=network",
     "--device=dri",
     "--env=PATH=/app/jre/bin:/usr/bin",
-    "--filesystem=home"
+    "--filesystem=home",
+    "--filesystem=host",
+    "--filesystem=~/.var/app"
   ],
   "build-options":{  
     "env":{  
